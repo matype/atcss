@@ -1,0 +1,26 @@
+{
+  "name": "acss",
+  "version": "0.0.1",
+  "description": "Annotations based CSS Processor",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/morishitter/acss/git"
+  },
+  "keywords": [
+    "css",
+    "annotation",
+    "processor"
+  ],
+  "author": "Masaaki Morishita",
+  "license": "MIT",
+  "dependencies": {
+    "postcss-extend": "^0.1.3",
+    "postcss-constant": "^0.1.1",
+    "postcss": "^3.0.7"
+  },
+  "devDependencies": {}
+}
