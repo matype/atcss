@@ -6,7 +6,7 @@ var argv = optimist.alias('V', 'versions')
                    .alias('c', 'compress')
                    .argv
 
-var pkg = require('package.json')
+var pkg = require('./package.json')
 var fs = require('fs')
 var Acss = require('./')
 
@@ -31,7 +31,7 @@ if (argv._[0] && argv._[1]) {
     options.compress = compress
     var css = fs.readFileSync(input, 'utf-8')
     var acss = new Acss(css, options)
-    fs.writeFile(output, acss.process, function (err) {
+    fs.writeFile(output, acss.process(css), function (err) {
         if (err) throw err
         console.log('Processed')
     })

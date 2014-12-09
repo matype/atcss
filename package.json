@@ -20,7 +20,12 @@
   "dependencies": {
     "postcss-extend": "^0.1.3",
     "postcss-constant": "^0.1.1",
-    "postcss": "^3.0.7"
+    "postcss": "^3.0.7",
+    "optimist": "^0.6.1",
+    "postcss-import": "^3.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "tape": "^3.0.3",
+    "tap": "^0.4.13"
+  }
 }

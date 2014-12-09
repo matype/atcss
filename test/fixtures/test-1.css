@@ -1,0 +1,31 @@
+@import url("test/fixtures/import.css");
+
+.base-1 {
+  /*
+   * @base
+   * @constant
+   */
+  font-size: 12px;
+}
+
+.base-2 {
+  /*
+   * @base
+   */
+  color: red;
+}
+
+.foo {
+  /*
+   * @extend .base-1, .base-2
+   */
+  padding: 10px;
+}
+
+.bar {
+  /*
+   * @extend .base-1
+   */
+  margin: 10px;
+}
+

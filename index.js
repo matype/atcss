@@ -28,7 +28,7 @@ Acss.prototype.process = function () {
                  .use(imprt())
                  .use(constant(this.css))
                  .use(extend(this.css))
-                 .process(css)
+                 .process(this.css)
                  .css
     }
     return output

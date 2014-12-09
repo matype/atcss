@@ -1,0 +1,33 @@
+.imprt {
+  color: blue;
+}
+
+.foo,
+.bar {
+  /*
+   * @base
+   * @constant
+   */
+  font-size: 12px;
+}
+
+.foo {
+  /*
+   * @base
+   */
+  color: red;
+}
+
+.foo {
+  /*
+   * @extend .base-1, .base-2
+   */
+  padding: 10px;
+}
+
+.bar {
+  /*
+   * @extend .base-1
+   */
+  margin: 10px;
+}
