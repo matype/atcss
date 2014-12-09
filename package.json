@@ -22,7 +22,8 @@
     "postcss-constant": "^0.1.1",
     "postcss": "^3.0.7",
     "optimist": "^0.6.1",
-    "postcss-import": "^3.2.0"
+    "postcss-import": "^3.2.0",
+    "csswring": "^2.0.0"
   },
   "devDependencies": {
     "tape": "^3.0.3",

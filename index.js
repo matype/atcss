@@ -2,6 +2,7 @@ var postcss = require('postcss')
 var imprt = require('postcss-import')
 var constant = require('postcss-constant')
 var extend = require('postcss-extend')
+var csswring = require('csswring')
 
 module.exports = Acss
 
@@ -14,13 +15,13 @@ function Acss (css, options) {
 
 Acss.prototype.process = function () {
     var output
-    if (this.compres) {
+    if (this.compress) {
         output = postcss()
                  .use(imprt())
                  .use(constant(this.css))
                  .use(extend(this.css))
                  .use(csswring.postcss)
-                 .process(css)
+                 .process(this.css)
                  .css
     }
     else {
