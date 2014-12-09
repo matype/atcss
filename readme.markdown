@@ -1,6 +1,6 @@
 # ACSS [![Build Status](https://travis-ci.org/morishitter/acss.svg)](https://travis-ci.org/morishitter/acss)
 
-Annotated CSS (ACSS) is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
+ACSS is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
 
 ## Installation
 
