@@ -89,6 +89,100 @@ $ acss input.css output.css
 }
 ```
 
+## Annotations syntax
+
+### `@constant`
+
+Rule sets using `@constant`, cannot override the rule set with the same selector.
+
+Ex:
+
+```css
+.class {
+  /*
+   * @constant
+   */
+   padding: 10px 14px;
+}
+
+.class {
+  padding: 0;
+}
+```
+
+**Run error**
+
+### `@base`
+
+Rule sets using `@base`, is the rule sets that is inherited from the other ones.
+
+Rules with `@base` do not output to css file after processing.
+
+```css
+.base-class {
+  /*
+   * @base
+   */
+   color: red;
+}
+```
+
+### `@extend`
+
+Using `@extend`, you can inherit other rule sets defined with `@base`.
+
+`@extend` get one or more arguments, it's just selectors in `@base` rule sets.
+
+```css
+.base-1 {
+  /*
+   * @base
+   */
+   color: red;
+}
+
+.base-2 {
+  /*
+   * @base
+   * @constant
+   */
+   font-size: 14px;
+   padding: 12px 16px;
+}
+
+.class {
+  /*
+   * @extend .base-1, .base-2
+   */
+}
+```
+
+Process above code, Yield:
+
+```css
+.class {
+  /*
+   * @base
+   */
+   color: red;
+}
+
+.class {
+  /*
+   * @base
+   * @constant
+   */
+   font-size: 14px;
+   padding: 12px 16px;
+}
+
+.class {
+  /*
+   * @extend .base-1, .base-2
+   */
+}
+```
+
 ## Options
 
 ```
