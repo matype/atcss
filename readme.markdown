@@ -1,5 +1,7 @@
 # ACSS [![Build Status](https://travis-ci.org/morishitter/acss.svg)](https://travis-ci.org/morishitter/acss)
 
+<img  width="100" height="100" src="http://morishitter.github.io/acss/acss.png">
+
 ACSS is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
 
 ## Installation
