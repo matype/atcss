@@ -21,3 +21,4 @@ function compare (name, description, options) {
 }
 
 compare('test-1')
+compare('test-2')

@@ -1,0 +1,26 @@
+.imprt {
+  color: blue;
+}
+
+.baz {
+  /*
+   * @base
+   */
+  font-size: 12px;
+}
+
+.baz {
+  /*
+   * @base
+   * @extend .foo
+   */
+  color: red;
+}
+
+.baz {
+  /*
+   * @extend .bar
+   */
+  padding: 10px;
+}
+
