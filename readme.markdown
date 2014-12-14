@@ -91,6 +91,13 @@ $ acss input.css output.css
 }
 ```
 
+## Using plugins
+
+- [postcss-constant](https://github.com/morishitter/postcss-constant)
+- [postcss-extend](https://github.com/morishitter/postcss-extend)
+- [postcss-import](https://github.com/postcss/postcss-import)
+- [postcss-important](https://github.com/morishitter/postcss-important)
+
 ## Annotations syntax
 
 ### `@constant`
@@ -184,6 +191,37 @@ Process above code. Yield:
    */
 }
 ```
+
+### `@important`
+
+Using `@important`, you can manage properties have `!impotant` at one place.
+
+```css
+.class {
+  /*
+   * @important font-size, padding
+   */
+   color: red;
+   font-size: 12px;
+   padding: 12px;
+}
+```
+
+Process above code. Yield:
+
+```css
+.class {
+  /*
+   * @important font-size, padding
+   */
+   color: red;
+   font-size: 12px !important;
+   padding: 12px !important;
+}
+```
+
+See also [postcss-important](https://github.com/morishitter/postcss-important).
+
 
 ## Options
 
