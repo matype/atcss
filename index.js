@@ -2,6 +2,7 @@ var postcss = require('postcss')
 var imprt = require('postcss-import')
 var constant = require('postcss-constant')
 var extend = require('postcss-extend')
+var important = require('postcss-important')
 var csswring = require('csswring')
 
 module.exports = Acss
@@ -20,6 +21,7 @@ Acss.prototype.process = function () {
                  .use(imprt())
                  .use(constant(this.css))
                  .use(extend(this.css))
+                 .use(important(this.css))
                  .use(csswring.postcss)
                  .process(this.css)
                  .css
@@ -29,6 +31,7 @@ Acss.prototype.process = function () {
                  .use(imprt())
                  .use(constant(this.css))
                  .use(extend(this.css))
+                 .use(important(this.css))
                  .process(this.css)
                  .css
     }

@@ -1,0 +1,18 @@
+.class {
+  /* @base */
+  font-size: 12px !important;
+}
+
+.class {
+  /* @base */
+  padding: 12px !important;
+}
+
+.class {
+  /*
+   * @extend .base, .base-2
+   * @important
+   */
+  margin: 10px !important;
+}
+

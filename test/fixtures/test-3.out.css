@@ -1,0 +1,16 @@
+.class {
+  /*
+   * @important font-size, color
+   * @base
+   */
+  padding: 10px;
+  font-size: 12px !important;
+  color: red !important;
+}
+
+.class {
+  /*
+   * @extend .base
+   */
+  margin: 10px;
+}
