@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 
-var optimist = require('optimist')
-var argv = optimist.alias('V', 'versions')
-                   .alias('h', 'help')
-                   .alias('c', 'compress')
-                   .argv
+var minimist = require('minimist')
+var argv = minimist(process.argv.slice(2), {
+    boolean: [
+        'help',
+        'versions'
+    ],
+    alias: {
+        c: 'compress',
+        h: 'help',
+        V: 'versions'
+    }
+})
 
 var pkg = require('./package.json')
 var fs = require('fs')
