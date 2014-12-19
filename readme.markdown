@@ -93,6 +93,7 @@ $ acss input.css output.css
 
 ## Using plugins
 
+- [autoprefixer](https://github.com/postcss/autoprefixer)
 - [postcss-constant](https://github.com/morishitter/postcss-constant)
 - [postcss-extend](https://github.com/morishitter/postcss-extend)
 - [postcss-import](https://github.com/postcss/postcss-import)
