@@ -1,0 +1,20 @@
+.base {
+  /*
+   * @base
+   */
+  font-size: 12px;
+}
+
+.foo {
+  /*
+   * @include .base
+   */
+  color: red;
+}
+
+.bar {
+  /*
+   * @extend .base
+   */
+  color: blue;
+}
