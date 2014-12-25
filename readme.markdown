@@ -230,7 +230,7 @@ Process above code. Yield:
 
 .class {
   /*
-   * @extend .base-1, .base-2
+   * @include .base-1, .base-2
    */
 }
 ```
