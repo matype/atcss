@@ -44,6 +44,13 @@ $ npm install acss
    */
   margin: 10px;
 }
+
+.baz {
+  /*
+   * @include .base-1
+   */
+  color: blue;
+}
 ```
 
 Processed with the following command:
@@ -89,6 +96,14 @@ $ acss input.css output.css
    */
   margin: 10px;
 }
+
+.baz {
+  /*
+   * @include .base-1
+   */
+  font-size: 12px;
+  color: blue;
+}
 ```
 
 ## Using plugins
@@ -96,6 +111,7 @@ $ acss input.css output.css
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [postcss-constant](https://github.com/morishitter/postcss-constant)
 - [postcss-extend](https://github.com/morishitter/postcss-extend)
+- [postcss-include](https://github.com/morishitter/postcss-include)
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-important](https://github.com/morishitter/postcss-important)
 
@@ -190,6 +206,45 @@ Process above code. Yield:
   /*
    * @extend .base-1, .base-2
    */
+}
+```
+
+### `@include`
+
+```css
+.base-1 {
+  /*
+   * @base
+   */
+   color: red;
+}
+
+.base-2 {
+  /*
+   * @base
+   * @constant
+   */
+   font-size: 14px;
+   padding: 12px 16px;
+}
+
+.class {
+  /*
+   * @extend .base-1, .base-2
+   */
+}
+```
+
+Process above code. Yield:
+
+```css
+.class {
+  /*
+   * @include .base-1, .base-2
+   */
+   color: red;
+   font-size: 14px;
+   padding: 12px 16px;
 }
 ```
 
