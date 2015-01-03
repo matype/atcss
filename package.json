@@ -1,6 +1,6 @@
 {
   "name": "acss",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Annotations based CSS Processor",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,9 @@
     "annotation",
     "processor"
   ],
+  "bin": {
+    "acss": "cli.js"
+  },
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
