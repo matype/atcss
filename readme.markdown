@@ -7,7 +7,7 @@ ACSS is annotations based CSS processing tool built with [PostCSS](https://githu
 ## Installation
 
 ```shell
-$ npm install acss
+$ npm install -g acss
 ```
 
 ## Example
@@ -103,6 +103,59 @@ $ acss input.css output.css
    */
   font-size: 12px;
   color: blue;
+}
+```
+
+## Why Annotations
+
+ACSS is 'Annotations based CSS processor'.
+Using metadata to process CSS as annotations in comment, browsers can read prior code to be processed.
+
+So, can devide styles for each environment (development or production).
+
+We often make rules known as utility classes.
+For example, `.pdt-10` as `padding-top: 10px`, `.bg-gray` as `background-color: #c3c9c9`.
+There are some CSS frameworks has many utility classes like [BASSCSS](http://www.basscss.com/).
+These are very usefull, because we can fine-tune design to suit our request.
+
+But, utility classes are too low level to use as it is.
+Because using execessive multiple classes do not change so much as inline style in HTML, and not aware of the semantic.
+
+Using ACSS, you can make semantic classes in production environment.
+
+Ex:
+
+```
+.btn {
+  /*
+   * @base
+   */
+
+  /* base button declarations */
+}
+
+.btn-blue {
+  /*
+   * @base
+   */
+
+  /* to color button red */
+}
+
+.btn-lg {
+  /*
+   * @base
+   */
+
+  /* to enlarge button */
+}
+
+.btn-next {
+  /*
+   * @extend .btn, .btn-blue, .btn-lg
+   */
+
+   /* extend rules for button, you can define rules with semantic names */
 }
 ```
 
