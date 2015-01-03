@@ -125,7 +125,7 @@ Using ACSS, you can make semantic classes in production environment.
 
 Ex:
 
-```
+```css
 .btn {
   /*
    * @base
