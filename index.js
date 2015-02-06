@@ -17,29 +17,17 @@ function Acss (css, options) {
 }
 
 Acss.prototype.process = function () {
-    var output
+    var output = postcss()
+      .use(imprt())
+      .use(constant(this.css))
+      .use(extend(this.css))
+      .use(include(this.css))
+      .use(important(this.css))
+      .use(autoprefixer.postcss);
+
     if (this.compress) {
-        output = postcss()
-                 .use(imprt())
-                 .use(constant(this.css))
-                 .use(extend(this.css))
-                 .use(include(this.css))
-                 .use(important(this.css))
-                 .use(autoprefixer.postcss)
-                 .use(csswring.postcss)
-                 .process(this.css)
-                 .css
+      output = output.use(csswring.postcss)
     }
-    else {
-        output = postcss()
-                 .use(imprt())
-                 .use(constant(this.css))
-                 .use(extend(this.css))
-                 .use(include(this.css))
-                 .use(important(this.css))
-                 .use(autoprefixer.postcss)
-                 .process(this.css)
-                 .css
-    }
-    return output
+
+    return output.process(this.css).css
 }
