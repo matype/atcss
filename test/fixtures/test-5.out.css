@@ -1,5 +1,22 @@
-a {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.bar {
+  /*
+   * @base
+   */
+  font-size: 12px;
 }
+
+.foo {
+  /*
+   * @include .base
+   */
+  color: red;
+  font-size: 12px;
+}
+
+.bar {
+  /*
+   * @extend .base
+   */
+  color: blue;
+}
+
