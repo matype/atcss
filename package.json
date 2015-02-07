@@ -1,6 +1,6 @@
 {
   "name": "acss",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Annotations based CSS Processor",
   "main": "index.js",
   "scripts": {
