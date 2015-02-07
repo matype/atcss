@@ -18,15 +18,15 @@ function Acss (css, options) {
 
 Acss.prototype.process = function () {
     var output = postcss()
-      .use(imprt())
-      .use(constant(this.css))
-      .use(extend(this.css))
-      .use(include(this.css))
-      .use(important(this.css))
-      .use(autoprefixer.postcss);
+        .use(imprt())
+        .use(constant(this.css))
+        .use(extend(this.css))
+        .use(include(this.css))
+        .use(important(this.css))
+        .use(autoprefixer.postcss);
 
     if (this.compress) {
-      output = output.use(csswring.postcss)
+        output = output.use(csswring.postcss)
     }
 
     return output.process(this.css).css

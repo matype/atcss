@@ -1,22 +1,19 @@
-.bar {
+.baz {
+  /* @base */
+  font-size: 12px;
+}
+
+.baz {
   /*
    * @base
+   * @extend .foo
    */
-  font-size: 12px;
+  padding: 0;
 }
 
-.foo {
+.baz {
   /*
-   * @include .base
+   * @extend .bar
    */
-  color: red;
-  font-size: 12px;
-}
-
-.bar {
-  /*
-   * @extend .base
-   */
-  color: blue;
 }
 
