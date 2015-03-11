@@ -6,6 +6,8 @@ var include = require('postcss-include')
 var important = require('postcss-important')
 var imprt = require('postcss-import')
 var extend = require('postcss-extend')
+var constantBlock = require('postcss-acss-constant')
+var inherit = require('postcss-acss-inherit')
 
 module.exports = Acss
 
@@ -20,8 +22,10 @@ Acss.prototype.process = function () {
     var output = postcss()
         .use(imprt())
         .use(constant(this.css))
+        .use(constantBlock(this.css))
         .use(extend(this.css))
         .use(include(this.css))
+        .use(inherit(this.css))
         .use(important(this.css))
         .use(autoprefixer.postcss);
 
