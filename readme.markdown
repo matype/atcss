@@ -22,6 +22,7 @@ $ npm install -g acss
    * @constant
    */
   font-size: 12px;
+  padding: 8px 16px;
 }
 
 .base-2 {
@@ -31,25 +32,18 @@ $ npm install -g acss
   color: red;
 }
 
-.foo {
+.class {
   /*
-   * @extend .base-1, .base-2
+   * @use .base-1
    */
-  padding: 10px;
+  background-color: green;
 }
 
-.bar {
+.too-long-and-ugly-selector-name {
   /*
-   * @extend .base-1
+   * @use .base-2
    */
   margin: 10px;
-}
-
-.baz {
-  /*
-   * @include .base-1
-   */
-  color: blue;
 }
 ```
 
@@ -67,42 +61,28 @@ $ acss input.css output.css
   color: blue;
 }
 
-.foo,
-.bar {
+.class {
   /*
    * @base
    * @constant
    */
   font-size: 12px;
+  padding: 8px 16px;
 }
 
-.foo {
+.class {
   /*
-   * @base
+   * @use .base-1
    */
-  color: red;
+  background-color: green;
 }
 
-.foo {
+.too-long-and-ugly-selector-name {
   /*
-   * @extend .base-1, .base-2
-   */
-  padding: 10px;
-}
-
-.bar {
-  /*
-   * @extend .base-1
+   * @use .base-2
    */
   margin: 10px;
-}
-
-.baz {
-  /*
-   * @include .base-1
-   */
-  font-size: 12px;
-  color: blue;
+  color: red;
 }
 ```
 
@@ -152,10 +132,106 @@ Ex:
 
 .btn-next {
   /*
-   * @extend .btn, .btn-blue, .btn-lg
+   * @use .btn, .btn-blue, .btn-lg
    */
 
    /* extend rules for button, you can define rules with semantic names */
+}
+```
+
+## Features
+
+### Constant block
+The Rule sets are surrounded by `@start constant` and `@end constant` annotations cannot cascade.
+
+```css
+/* @start constant */
+.class {
+  color: red;
+}
+
+.class {
+  color: blue; /* Error */
+}
+
+.nested .class {
+  padding: 0; /* Error */
+}
+
+.child > .class {
+    background-color: red; /* Error */
+}
+/* @end constant */
+```
+
+### Hight performance inheritance of other rules
+The function to inherit other rules of ACSS is defferent from `@extend` of existing CSS preprocessors like Sass.
+
+Sass's `@extend` can only duplicate its selectors to base ones.
+For example, when the declarations in base rules are too short or the selector inheritance destination rules is too long,
+ duplicating its selector like Sass's `@extend` is not good consider file size.
+
+In this case, the good behavior is expanding declarations in the base rule to inheritance destination rules.
+
+ACSS provides the interface to inherit other rules, `@use`.
+And, ACSS processor automatically choose the most appropriate method to inherit.
+
+`input.css`:
+```css
+.base-1 {
+  /*
+   * @base
+   */
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.base-2 {
+  /*
+   * @base
+   */
+  color: red;
+}
+
+.class {
+  /*
+   * @use .base-1
+   */
+  background-color: green;
+}
+
+.too-long-and-ugly-selector-name {
+  /*
+   * @use .base-2
+   */
+  margin: 10px;
+}
+```
+
+`output.css` (Yields):
+
+```css
+.class {
+  /*
+   * @base
+   */
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.class {
+  /*
+   * @use .base-1
+   */
+  background-color: green;
+}
+
+.too-long-and-ugly-selector-name {
+  /*
+   * @use .base-2
+   */
+  margin: 10px;
+  color: red;
 }
 ```
 
@@ -167,6 +243,8 @@ Ex:
 - [postcss-include](https://github.com/morishitter/postcss-include)
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-important](https://github.com/morishitter/postcss-important)
+- [postcss-acss-constant](https://github.com/morishitter/postcss-acss-constant)
+- [postcss-acss-inherit](https://github.com/morishitter/postcss-acss-inherit)
 
 ## Annotations syntax
 
@@ -330,6 +408,10 @@ Process above code. Yield:
 ```
 
 See also [postcss-important](https://github.com/morishitter/postcss-important).
+
+### `@start constant` & `@end constant`
+
+### `@use`
 
 
 ## Options
