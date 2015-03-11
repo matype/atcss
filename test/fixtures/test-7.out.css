@@ -1,0 +1,10 @@
+.foo {
+    /* @base */
+    color: red;
+}
+
+.foo {
+    /* @use .base */
+    padding: 0;
+}
+

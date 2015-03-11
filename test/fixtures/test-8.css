@@ -1,0 +1,9 @@
+.base {
+    /* @base */
+    color: red;
+}
+
+.too__long__selector__name {
+    /* @use .base */
+    padding: 0;
+}
