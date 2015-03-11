@@ -164,11 +164,11 @@ The Rule sets are surrounded by `@start constant` and `@end constant` annotation
 /* @end constant */
 ```
 
-### Hight performance inheritance of other rules
+### High performance inheritance of other rules
 The function to inherit other rules of ACSS is defferent from `@extend` of existing CSS preprocessors like Sass.
 
 Sass's `@extend` can only duplicate its selectors to base ones.
-For example, when the declarations in base rules are too short or the selector inheritance destination rules is too long,
+For example, when the declarations in base rules are too short or in media queries, or the selector inheritance destination rules is too long,
  duplicating its selector like Sass's `@extend` is not good consider file size.
 
 In this case, the good behavior is expanding declarations in the base rule to inheritance destination rules.
