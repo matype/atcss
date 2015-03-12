@@ -1,0 +1,6 @@
+.too__long__selector__name {
+    /* @use .base */
+    padding: 0;
+    color: red;
+}
+
