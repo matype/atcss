@@ -20,7 +20,7 @@ var Acss = require('./')
 if (argv.V) console.log(pkg.version)
 
 if (argv.h) {
-    console.log('Usage: acss input-name output-name [options]');
+    console.log('Usage: atcss input-name output-name [options]');
     console.log('');
     console.log('Options:');
     console.log('');

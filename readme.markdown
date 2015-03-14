@@ -1,13 +1,13 @@
-# ACSS [![Build Status](https://travis-ci.org/morishitter/acss.svg)](https://travis-ci.org/morishitter/acss)
+# AtCSS [![Build Status](https://travis-ci.org/morishitter/atcss.svg)](https://travis-ci.org/morishitter/atcss)
 
 <img  width="150" height="150" src="http://morishitter.github.io/acss/acss.png">
 
-ACSS is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
+AtCSS is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
 
 ## Installation
 
 ```shell
-$ npm install -g acss
+$ npm install -g atcss
 ```
 
 ## Example
@@ -50,7 +50,7 @@ $ npm install -g acss
 Processed with the following command:
 
 ```
-$ acss input.css output.css
+$ atcss input.css output.css
 ```
 
 `output.css` (Yields):
@@ -417,11 +417,11 @@ See also [postcss-important](https://github.com/morishitter/postcss-important).
 ## Options
 
 ```
-$ acss --help
+$ atcss --help
 ```
 
 ```
-Usage: acss input-name output-name [options]
+Usage: atcss input-name output-name [options]
 
 Options:
 

@@ -1,5 +1,5 @@
 {
-  "name": "acss",
+  "name": "atcss",
   "version": "1.0.0",
   "description": "Annotations based CSS Processor",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/morishitter/acss/git"
+    "url": "git://github.com/morishitter/atcss/git"
   },
   "keywords": [
     "css",
@@ -16,7 +16,7 @@
     "processor"
   ],
   "bin": {
-    "acss": "cli.js"
+    "atcss": "cli.js"
   },
   "author": "Masaaki Morishita",
   "license": "MIT",
