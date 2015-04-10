@@ -24,7 +24,7 @@
     "autoprefixer": "^5.1.0",
     "csswring": "^3.0.1",
     "minimist": "^1.1.0",
-    "postcss": "^4.0.3",
+    "postcss": "^4.1.4",
     "postcss-acss-constant": "0.0.2",
     "postcss-acss-inherit": "0.0.1",
     "postcss-constant": "^0.2.0",
