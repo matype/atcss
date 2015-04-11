@@ -6,8 +6,8 @@ var include = require('postcss-include')
 var important = require('postcss-important')
 var imprt = require('postcss-import')
 var extend = require('postcss-extend')
-var constantBlock = require('postcss-acss-constant')
-var inherit = require('postcss-acss-inherit')
+var constantBlock = require('postcss-atcss-constant')
+var inherit = require('postcss-atcss-inherit')
 
 module.exports = Atcss
 
