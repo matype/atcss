@@ -9,16 +9,16 @@ var extend = require('postcss-extend')
 var constantBlock = require('postcss-acss-constant')
 var inherit = require('postcss-acss-inherit')
 
-module.exports = Acss
+module.exports = Atcss
 
-function Acss (css, options) {
-    if (!this instanceof Acss) return new Acss(css, options)
+function Atcss (css, options) {
+    if (!this instanceof Atcss) return new Atcss(css, options)
     options = options || {}
     this.css = css
     this.compress = options.compress
 }
 
-Acss.prototype.process = function () {
+Atcss.prototype.process = function () {
     var output = postcss()
         .use(imprt())
         .use(constant(this.css))

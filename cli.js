@@ -15,7 +15,7 @@ var argv = minimist(process.argv.slice(2), {
 
 var pkg = require('./package.json')
 var fs = require('fs')
-var Acss = require('./')
+var Atcss = require('./')
 
 if (argv.V) console.log(pkg.version)
 
@@ -37,8 +37,8 @@ if (argv._[0] && argv._[1]) {
     var options = {}
     options.compress = compress
     var css = fs.readFileSync(input, 'utf-8')
-    var acss = new Acss(css, options)
-    fs.writeFile(output, acss.process(css), function (err) {
+    var atcss = new Atcss(css, options)
+    fs.writeFile(output, atcss.process(css), function (err) {
         if (err) throw err
         console.log('Processed')
     })

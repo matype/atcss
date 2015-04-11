@@ -1,6 +1,6 @@
 # AtCSS [![Build Status](https://travis-ci.org/morishitter/atcss.svg)](https://travis-ci.org/morishitter/atcss)
 
-<img  width="150" height="150" src="http://morishitter.github.io/acss/acss.png">
+<img  width="150" height="150" src="http://morishitter.github.io/atcss/atcss.png">
 
 AtCSS is annotations based CSS processing tool built with [PostCSS](https://github.com/postcss/postcss).
 
@@ -243,8 +243,8 @@ And, ACSS processor automatically choose the most appropriate method to inherit.
 - [postcss-include](https://github.com/morishitter/postcss-include)
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-important](https://github.com/morishitter/postcss-important)
-- [postcss-acss-constant](https://github.com/morishitter/postcss-acss-constant)
-- [postcss-acss-inherit](https://github.com/morishitter/postcss-acss-inherit)
+- [postcss-atcss-constant](https://github.com/morishitter/postcss-atcss-constant)
+- [postcss-atcss-inherit](https://github.com/morishitter/postcss-atcss-inherit)
 
 ## Annotations syntax
 
@@ -432,8 +432,8 @@ Options:
 
 ## Option projects
 
-- [grunt-acss](https://github.com/morishitter/grunt-acss)
-- [gulp-acss](https://github.com/morishitter/gulp-acss)
+- [grunt-atcss](https://github.com/morishitter/grunt-atcss)
+- [gulp-atcss](https://github.com/morishitter/gulp-atcss)
 
 ## License
 
