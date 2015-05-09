@@ -31,7 +31,7 @@
     "postcss-extend": "^0.3.0",
     "postcss-import": "^5.0.0",
     "postcss-important": "^0.2.0",
-    "postcss-include": "^0.2.0"
+    "postcss-include": "0.2.0"
   },
   "devDependencies": {
     "tape": "^3.0.3"
