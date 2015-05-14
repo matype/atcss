@@ -1,6 +1,6 @@
 {
   "name": "atcss",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Annotations based CSS Processor",
   "main": "index.js",
   "scripts": {
