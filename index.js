@@ -8,6 +8,7 @@ var imprt = require('postcss-import')
 var extend = require('postcss-extend')
 var constantBlock = require('postcss-atcss-constant')
 var inherit = require('postcss-atcss-inherit')
+var removeBase = require('postcss-remove-base')
 
 module.exports = Atcss
 
@@ -23,9 +24,10 @@ Atcss.prototype.process = function () {
         .use(imprt())
         .use(constant(this.css))
         .use(constantBlock(this.css))
+        .use(include({css: this.css, removeBase: false}))
         .use(extend(this.css))
-        .use(include(this.css))
         .use(inherit(this.css))
+        .use(removeBase())
         .use(important(this.css))
         .use(autoprefixer.postcss);
 
