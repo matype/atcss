@@ -1,6 +1,6 @@
 {
   "name": "atcss",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Annotations based CSS Processor",
   "main": "index.js",
   "scripts": {
@@ -25,10 +25,10 @@
     "csswring": "^3.0.1",
     "minimist": "^1.1.0",
     "postcss": "^4.1.4",
+    "postcss-annotation-extend": "^1.0.0",
     "postcss-atcss-constant": "0.0.2",
     "postcss-atcss-inherit": "^0.1.0",
     "postcss-constant": "^0.2.0",
-    "postcss-extend": "^0.3.0",
     "postcss-import": "^5.0.0",
     "postcss-important": "^0.2.0",
     "postcss-include": "^0.3.0",

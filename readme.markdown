@@ -239,7 +239,7 @@ And, ACSS processor automatically choose the most appropriate method to inherit.
 
 - [autoprefixer](https://github.com/postcss/autoprefixer)
 - [postcss-constant](https://github.com/morishitter/postcss-constant)
-- [postcss-extend](https://github.com/morishitter/postcss-extend)
+- [postcss-annotation-extend](https://github.com/morishitter/postcss-annotation-extend)
 - [postcss-include](https://github.com/morishitter/postcss-include)
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-important](https://github.com/morishitter/postcss-important)
