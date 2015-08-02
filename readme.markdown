@@ -88,7 +88,7 @@ $ atcss input.css output.css
 
 ## Why Annotations
 
-ACSS is 'Annotations based CSS processor'.
+AtCSS is 'Annotations based CSS processor'.
 Using metadata to process CSS as annotations in comment, browsers can read prior code to be processed.
 
 So, can devide styles for each environment (development or production).
@@ -101,7 +101,7 @@ These are very usefull, because we can fine-tune design to suit our request.
 But, utility classes are too low level to use as it is.
 Because using execessive multiple classes do not change so much as inline style in HTML, and not aware of the semantic.
 
-Using ACSS, you can make semantic classes in production environment.
+Using AtCSS, you can make semantic classes in production environment.
 
 Ex:
 
@@ -165,7 +165,7 @@ The Rule sets are surrounded by `@start constant` and `@end constant` annotation
 ```
 
 ### High performance inheritance of other rules
-The function to inherit other rules of ACSS is defferent from `@extend` of existing CSS preprocessors like Sass.
+The function to inherit other rules of AtCSS is defferent from `@extend` of existing CSS preprocessors like Sass.
 
 Sass's `@extend` can only duplicate its selectors to base ones.
 For example, when the declarations in base rules are too short or in media queries, or the selector inheritance destination rules is too long,
@@ -173,8 +173,8 @@ For example, when the declarations in base rules are too short or in media queri
 
 In this case, the good behavior is expanding declarations in the base rule to inheritance destination rules.
 
-ACSS provides the interface to inherit other rules, `@use`.
-And, ACSS processor automatically choose the most appropriate method to inherit.
+AtCSS provides the interface to inherit other rules, `@use`.
+And, AtCSS processor automatically choose the most appropriate method to inherit.
 
 `input.css`:
 ```css
