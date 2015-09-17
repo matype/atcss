@@ -21,20 +21,20 @@
   "author": "Masaaki Morishita",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^5.1.0",
-    "csswring": "^3.0.1",
-    "minimist": "^1.1.0",
-    "postcss": "^4.1.4",
+    "autoprefixer": "^6.0.2",
+    "csswring": "^4.0.0",
+    "minimist": "^1.2.0",
+    "postcss": "^5.0.5",
+    "postcss-annotation-constant": "^1.0.0",
     "postcss-annotation-extend": "^1.0.0",
-    "postcss-atcss-constant": "0.0.2",
-    "postcss-atcss-inherit": "^0.1.0",
-    "postcss-constant": "^0.2.0",
-    "postcss-import": "^5.0.0",
-    "postcss-important": "^0.2.0",
-    "postcss-include": "^0.3.0",
-    "postcss-remove-base": "^0.1.1"
+    "postcss-annotation-include": "^1.0.0",
+    "postcss-atcss-constant": "^0.1.0",
+    "postcss-atcss-inherit": "^0.2.0",
+    "postcss-import": "^7.0.0",
+    "postcss-important": "^0.3.0",
+    "postcss-remove-base": "^0.2.0"
   },
   "devDependencies": {
-    "tape": "^3.0.3"
+    "tape": "^4.2.0"
   }
 }
